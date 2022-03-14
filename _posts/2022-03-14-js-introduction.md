@@ -1,9 +1,9 @@
 ---
 layout: single
-title: "Javascript 소개"
+title: "JavaScript 기초"
 ---
 
-# JS 소개
+# JS 기초
 
 ## JS 배경
 
