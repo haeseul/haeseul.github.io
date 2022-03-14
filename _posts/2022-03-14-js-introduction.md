@@ -42,6 +42,7 @@ title: "JavaScript 기초"
 # 자료형
 JavaScript는 동적 언어이기 때문에 변수 타입을 미리 선언할 필요가 없다.  
 즉 같은 변수에 여러 타입의 값을 넣을 수 있다.
+
 ```javascript
 var foo = 42;   // foo는 이제 Number
 var foo = "bar";   // foo는 이제 String
@@ -53,6 +54,7 @@ var foo = true;   // foo는 이제 Boolean
 ## 1. 기본 타입 (Primitive value)
 
 - 변경이 불가능한 값 (값 그 자체)
+
 ```js
 const test = 'string'
 console.log(test.toUpperCase()) // STRING
@@ -70,10 +72,12 @@ if (num == 0) {
     console.log('num은 0이 아닙니다');  // ===일 때의 엄격한 비교
 }
 ```
+
 <br>
 
 ## 2. 객체 타입 (Reference value)
 - 리터럴 방식의 객체, 배열, 함수
+
 ```javascript
 const obj = {
     name: 'jeong',  // 메모리 주소 안에 실제 값 입력
@@ -114,6 +118,7 @@ JavaScript의 식별자는 대소문자, 유니코드 글자, $, _, 숫자로 �
 
 # use strict
 기존에 조용히 무시되던 에러들을 throwing 하여 엄격한 모드로 JavaScript를 바꾸어준다.
+
 ```javascript
 function func() {
     'use strict';       // 엄격모드
@@ -122,7 +127,9 @@ function func() {
     return 'hello';
 }
 ```
+
 ECMAScript 2015는 모듈에 strict mode를 적용하여 JavaScript 모듈의 전체 컨텐츠는 엄격 모드를 자동으로 실행한다.
+
 ```javascript
 function strict() {
     // 모듈이기 때문에 기본적으로 엄격하다.
@@ -133,6 +140,7 @@ function strict() {
 
 # Undifined & NULL
 JavaScript는 느슨한 언어이기 때문에 undefined와 null 상태를 확실히 구분해서 사용해주어야 한다!
+
 ```js
 let variable;               // 선언만 한 상태 -> undefined
 const initValue = null;     // null을 강제적으로 지정
@@ -153,6 +161,7 @@ console.log(Number(null));      // 0
 - string과 number --> string
 - number와 number --> number
 - 원하는 계산을 정상적으로 하고싶다면 명시적으로 예측 가능하게 작성해주는 것이 좋다
+
 ```js
 const result1 = 1 + '입니다'    // 1입니다
 console.log(typeof result1)     // string
