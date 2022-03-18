@@ -1,24 +1,20 @@
 // Super Class
-function Animal(name, sound) {
-    this.name = name;
-    this.sound = sound;
-}
+class Animal {
+    constructor(name, sound) {
+        this.name = name;
+        this.sound = sound;
+    }
 
-Animal.prototype.getInfo = function() {
+    getInfo() {
     return this.name + '가(이) ' + this.sound + ' 소리를 낸다.'
+    }
 }
 
-function Friends(name, sound) {
-    // 명시적 바인딩
-    Animal.call(this, name, sound);
+class Friends extends Animal {
+    constructor(name, sound) {
+        super(name, sound);      // 부모의 생성자 함수 호출
+    }
 }
-
-// Sub Class
-Friends.prototype = Object.create(
-    Animal.prototype,
-)
-
-Friends.prototype.constructor = Friends;
 
 const dog = new Friends('개', '멍멍')
 const cat = new Friends('고양이', '야옹')
