@@ -1,23 +1,37 @@
-article.addEventListener('click', () => window.alert('article'));
-division.addEventListener('click', () => window.alert('division'));
-p.addEventListener('click', () => window.alert('p'));
-button.addEventListener('click', (event) => {
-    event.stopProgagation();
-    window.alert('button')
+let i = 0;
+
+document.querySelector('input').addEventListener('keyup', () => {
+    i = i + 1;
+    console.log(i);
 });
 
-const div = document.querySelector('div');
-const ul = document.querySelector('ul');
+// 마지막 호출 이후 일정 밀리세컨드 이후로 지연된 호출을 하도록 debounce 함수를 만들 수 있다.
+// 실행시킬 함수, 지연시킬 밀리세컨드를 인자로 받는다
+function debounce(callback, wait) {
+    let timeout;    // 초기값: undefined
 
-div.addEventListener('click', (event) => {
-    console.error('DIV에 이벤트 발생');
-    event.target.style.background = 'blue';
-})
+    // closure
+    return function (...args) {
+        const context = this;
 
-ul.addEventListener('click', (event) => {
-    console.warn('UL에 이벤트 발생');
-    event.target.style.background = 'red';
-})
+        clearTimeout(timeout);
+        timeout = setTimeout(() => 
+            callback.apply(context, args), wait);
+    }
+}
 
-const items = document.querySelectorAll('li');
-items.forEach((item) => item.addEventListener('click', console.log('li clicked')));
+
+function throttle(callback, wait) {
+    let timeout = null;
+
+    return function (...args) {
+        const context = this;
+
+        if (!timeout) {
+            timeout = setTimeout(() => {
+                callback.apply(this, agrs);
+                timeout = null;
+            }, wait);
+        }
+    }
+}
