@@ -1,32 +1,23 @@
-const starbucks = function (coffeeName) {
-    return new Promise((resolve, reject) => {
-        if (coffeeName === '아메리카노') {
-            resolve ('아메리카노 한잔입니다.');
-        } else {
-            reject ('아메리카노는 없습니다.');
-        }
-    });
-};
+article.addEventListener('click', () => window.alert('article'));
+division.addEventListener('click', () => window.alert('division'));
+p.addEventListener('click', () => window.alert('p'));
+button.addEventListener('click', (event) => {
+    event.stopProgagation();
+    window.alert('button')
+});
 
-// starbucks(drink)
-//     .then((res) => console.log(res))
-//     .catch((rej) => console.log(rej))           // 아메리카노는 없습니다.
-//     .finally(() => console.log('감사합니다.'));  // 감사합니다.
+const div = document.querySelector('div');
+const ul = document.querySelector('ul');
 
-// starbucks('아메리카노')
-//     .then((res) => console.log(res))            // 아메리카노는 한잔입니다.
-//     .catch((rej) => console.log(rej))
-//     .finally(() => console.log('감사합니다.'));  // 감사합니다.
+div.addEventListener('click', (event) => {
+    console.error('DIV에 이벤트 발생');
+    event.target.style.background = 'blue';
+})
 
-async function americano(drink) {
-    try {
-        const result = await starbucks(drink);
-        return result
-    } catch (error) {
-        console.log(error)
-    } finally {
-        console.log('감사합니다.')
-    }
-}
+ul.addEventListener('click', (event) => {
+    console.warn('UL에 이벤트 발생');
+    event.target.style.background = 'red';
+})
 
-console.log(americano('아메리노'))
+const items = document.querySelectorAll('li');
+items.forEach((item) => item.addEventListener('click', console.log('li clicked')));
