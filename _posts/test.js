@@ -1,37 +1,34 @@
-let i = 0;
+function Person(name, age, location) {
+    this.name = name;
+    this.age = age;
+    this.location = location;
 
-document.querySelector('input').addEventListener('keyup', () => {
-    i = i + 1;
-    console.log(i);
-});
-
-// 마지막 호출 이후 일정 밀리세컨드 이후로 지연된 호출을 하도록 debounce 함수를 만들 수 있다.
-// 실행시킬 함수, 지연시킬 밀리세컨드를 인자로 받는다
-function debounce(callback, wait) {
-    let timeout;    // 초기값: undefined
-
-    // closure
-    return function (...args) {
-        const context = this;
-
-        clearTimeout(timeout);
-        timeout = setTimeout(() => 
-            callback.apply(context, args), wait);
+    this.getName = function () {
+        return this.name + '입니다';
     }
 }
 
+module.exports = Person;
 
-function throttle(callback, wait) {
-    let timeout = null;
+const Person = require('./export되는 commonJS 파일');
 
-    return function (...args) {
-        const context = this;
+const me = new Person('jeong', 10, 'korea')
+const you = new Person('kim', 10, 'seoul')
 
-        if (!timeout) {
-            timeout = setTimeout(() => {
-                callback.apply(this, agrs);
-                timeout = null;
-            }, wait);
-        }
+me.getName();
+you.getName();
+
+(function (root, factory) {
+    if (typeof exports === 'object' && module.exports) {
+        // CommonJS
+        module.exports = factory(require('module'))
+    } else if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['module'], function (module) { })
+    } else {
+        // 전역공간
+        root.global = factory(rood.module)
     }
-}
+} (this, function (module) {
+    // 실제 모듈
+}))
