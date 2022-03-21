@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "JavaScript 기초"
+title: "[JavaScript] JavaScript 기초"
 ---
 
 # JS 기초

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "이벤트 루프"
+title: "[JavaScript] 이벤트 루프"
 ---
 
 JS 엔진은 한 번에 한 개의 코드만 실행할 수 있다.

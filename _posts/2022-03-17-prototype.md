@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Prototype"
+title: "[JavaScript] Prototype과 Constructor"
 ---
 
 ## Prototype

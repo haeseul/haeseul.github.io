@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "실행 컨텍스트(EC)"
+title: "[JavaScript] 실행 컨텍스트(EC)"
 ---
 
 
