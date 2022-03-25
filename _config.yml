@@ -12,15 +12,15 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Dev. Haeseul"
+locale                   : "ko-KR"
+title                    : "Everyday Insights 💭✨"
 title_separator          : "-"
-subtitle                 : "모르면 하면 돼"
+subtitle                 : # 
 name                     : "haeseul"
-description              : "An amazing website."
+description              : "개발 공부 블로그"
 url                      : "https://haeseul.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -108,8 +108,8 @@ analytics:
 # Site Author
 author:
   name             : "haeseul"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **HARD-Training** person."
+  avatar           : "https://user-images.githubusercontent.com/58204031/160080643-88d5707b-ea3a-4908-b708-7c949b0a0d7f.png"
+  bio              : "열심히 삽시다"
   location         : "Seoul, KOREA"
   email            :
   links:
