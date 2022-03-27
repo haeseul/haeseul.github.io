@@ -1,6 +1,14 @@
 ---
 layout: single
 title: "[JavaScript] 이벤트 루프"
+
+categories:
+  -  JS advance
+tags:
+  - [JS, Event Loop]
+
+toc: true
+toc_sticky: true
 ---
 
 JS 엔진은 한 번에 한 개의 코드만 실행할 수 있다.

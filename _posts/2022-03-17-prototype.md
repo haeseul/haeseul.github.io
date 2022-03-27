@@ -1,6 +1,14 @@
 ---
 layout: single
 title: "[JavaScript] Prototype과 Constructor"
+
+categories:
+  -  JS Grammar
+tags:
+  - [JS, Prototype, Constructor, __proto__]
+
+toc: true
+toc_sticky: true
 ---
 
 ## Prototype

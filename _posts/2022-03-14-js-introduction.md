@@ -1,6 +1,14 @@
 ---
 layout: single
 title: "[JavaScript] JavaScript 기초"
+
+categories:
+  -  JS Grammar
+tags:
+  - [JS, ECMA, 변수, 자료형, DOM, 식별자, 형변환]
+
+toc: true
+toc_sticky: true
 ---
 
 # JS 기초

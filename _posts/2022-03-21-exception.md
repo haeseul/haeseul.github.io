@@ -1,6 +1,14 @@
 ---
 layout: single
 title: "[JavaScript] Exception"
+
+categories:
+  -  JS advance
+tags:
+  - [JS, Exception, throw, error]
+
+toc: true
+toc_sticky: true
 ---
 
 ## 예외처리

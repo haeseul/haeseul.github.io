@@ -1,6 +1,14 @@
 ---
 layout: single
 title: "[JavaScript] 실행 컨텍스트(EC)"
+
+categories:
+  -  JS advance
+tags:
+  - [JS, Execution Context, GEC, FEC]
+
+toc: true
+toc_sticky: true
 ---
 
 
