@@ -7,5 +7,5 @@ sidebar_main: true
 ---
 
 
-{% assign posts = site.categories['JS grammar'] %}
+{% assign posts = site.categories['JS Grammar'] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
